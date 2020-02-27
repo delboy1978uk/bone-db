@@ -32,7 +32,7 @@ class DbPackage implements RegistrationInterface
                 return $dbConnection;
             });
         } else {
-            throw new Exception('I18nPackage is registered but there is no db config. See the 
+            throw new Exception('DbPackage is registered but there is no db config. See the 
             delboy1978uk/bone-db README.', 418);
         }
     }
