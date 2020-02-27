@@ -1,27 +1,10 @@
-# db
+# bone-db
 PDO Connection package for Bone Framework
 ## installation
-Use Composer
-```
-composer require delboy1978uk/bone-db
-```
+bone-db comes pre-installed as part of the core Bone Framework packages. Install the skeleton project 
+https://github.com/delboy1978uk/bonemvc
 ## usage
-Simply add to the `config/packages.php`
-```php
-<?php
-
-// use statements here
-use Bone\Db\DbPackage;
-
-return [
-    'packages' => [
-        // packages here...,
-        DbPackage::class,
-    ],
-    // ...
-];
-```
-And add a `db.php` to your config. Here is the Bone Framework Docker development environment settings:
+You should already have a `bone-db.php` config in your . Here is the Bone Framework Docker development environment settings:
 ```php
 <?php
 
