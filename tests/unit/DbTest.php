@@ -3,6 +3,7 @@
 namespace Barnacle\Tests;
 
 use Barnacle\Container;
+use Barnacle\Exception\NotFoundException;
 use Bone\Db\DbPackage;
 use PDO;
 
@@ -36,6 +37,16 @@ class DbTest extends \Codeception\TestCase\Test
         $dbPackage->addToContainer($c);
         $pdo = $c->get(PDO::class);
         $this->assertInstanceOf(PDO::class, $pdo);
+    }
+
+
+    public function testException()
+    {
+        $c = $this->container;
+        $this->expectException(NotFoundException::class);
+        $dbPackage = new DbPackage();
+        $dbPackage->addToContainer($c);
+        $pdo = $c->get(PDO::class);
     }
 
 }

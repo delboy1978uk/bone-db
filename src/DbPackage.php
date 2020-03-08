@@ -1,12 +1,10 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Bone\Db;
 
 use Barnacle\Container;
 use Barnacle\RegistrationInterface;
-use Bone\Exception;
+use Barnacle\Exception\NotFoundException
 use PDO;
 
 class DbPackage implements RegistrationInterface
@@ -32,24 +30,8 @@ class DbPackage implements RegistrationInterface
                 return $dbConnection;
             });
         } else {
-            throw new Exception('DbPackage is registered but there is no db config. See the 
+            throw new NotFoundException('DbPackage is registered but there is no db config. See the 
             delboy1978uk/bone-db README.', 418);
         }
-    }
-
-    /**
-     * @return string
-     */
-    public function getEntityPath(): string
-    {
-        return '';
-    }
-
-    /**
-     * @return bool
-     */
-    public function hasEntityPath(): bool
-    {
-        return false;
     }
 }
