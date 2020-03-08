@@ -4,7 +4,7 @@ namespace Bone\Db;
 
 use Barnacle\Container;
 use Barnacle\RegistrationInterface;
-use Barnacle\Exception\NotFoundException
+use Barnacle\Exception\NotFoundException;
 use PDO;
 
 class DbPackage implements RegistrationInterface
