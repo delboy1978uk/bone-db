@@ -8,13 +8,16 @@
             "email": "delboy1978uk@gmail.com"
         }
     ],
-    "require": [],
+    "require": {
+        "php": ">7.1",
+        "delboy1978uk/barnacle": "^2.2"
+    },
     "require-dev": {
         "roave\/security-advisories": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "Bone\\Db\\": "src\/"
+            "Bone\\Db\\": "src/"
         }
     },
     "autoload-dev": {
