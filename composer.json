@@ -16,5 +16,10 @@
         "psr-4": {
             "Bone\\Db\\": "src\/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BoneTest\\": "tests/unit/"
+        }
     }
 }

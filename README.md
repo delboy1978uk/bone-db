@@ -1,4 +1,7 @@
 # bone-db
+[![Latest Stable Version](https://poser.pugx.org/delboy1978uk/bone-db/v/stable)](https://packagist.org/packages/delboy1978uk/bone-db) [![Total Downloads](https://poser.pugx.org/delboy1978uk/bone/downloads)](https://packagist.org/packages/delboy1978uk/bone) [![Latest Unstable Version](https://poser.pugx.org/delboy1978uk/bone-db/v/unstable)](https://packagist.org/packages/delboy1978uk/bone-db) [![License](https://poser.pugx.org/delboy1978uk/bone-db/license)](https://packagist.org/packages/delboy1978uk/bone-db)<br />
+[![Build Status](https://travis-ci.org/delboy1978uk/bone-db.png?branch=master)](https://travis-ci.org/delboy1978uk/bone-db) [![Code Coverage](https://scrutinizer-ci.com/g/delboy1978uk/bone-db/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bone-db/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/delboy1978uk/bone-db/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/delboy1978uk/bone-db/?branch=master)<br />
+
 PDO Connection package for Bone Framework
 ## installation
 bone-db comes pre-installed as part of the core Bone Framework packages. Install the skeleton project 
