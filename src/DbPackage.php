@@ -18,9 +18,9 @@ class DbPackage implements RegistrationInterface
             $c[PDO::class] = $c->factory(function (Container $c): PDO {
                 $credentials = $c->get('db');
                 $host = $credentials['host'];
-                $db = $credentials['database'];
+                $db = $credentials['dbname'];
                 $user = $credentials['user'];
-                $pass = $credentials['pass'];
+                $pass = $credentials['password'];
 
                 $dbConnection = new PDO('mysql:host=' . $host . ';dbname=' . $db, $user, $pass, [
                     PDO::ATTR_EMULATE_PREPARES => false,

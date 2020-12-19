@@ -15,10 +15,8 @@ return [
     'db' => [
         'driver' => 'pdo_mysql',
         'host' => 'mariadb',
-        'database' => 'awesome',
         'dbname' => 'awesome',
         'user' => 'dbuser',
-        'pass' => '[123456]',
         'password' => '[123456]',
     ],
 ];
@@ -29,6 +27,10 @@ You can inject your `PDO` connection into any of your classes via your Package r
 ```php
 $pdoConnection = $c->get(PDO::class); // add a use statement too! 
 ```
+## convenience interface and trait
+You can quickly get a PDO connection getter and setter into your controllers by using `Bone\Db\HasDbTrait`.
+You can also implement `Bone\Db\DbProviderInterface` and auto initialise it by passing into bone-controller Init class in
+the add to container factory method.
 ## reference
 Official Manual https://www.php.net/manual/en/book.pdo.php
 

@@ -5,6 +5,8 @@ namespace Barnacle\Tests;
 use Barnacle\Container;
 use Barnacle\Exception\NotFoundException;
 use Bone\Db\DbPackage;
+use Bone\Db\DbProviderInterface;
+use Bone\Db\HasDbTrait;
 use PDO;
 
 class DbTest extends \Codeception\TestCase\Test
@@ -29,9 +31,9 @@ class DbTest extends \Codeception\TestCase\Test
         $c = $this->container;
         $c['db'] = [
             'host' => '127.0.0.1',
-            'database' => 'travis_test',
+            'dbname' => 'travis_test',
             'user' => 'travis',
-            'pass' => ''
+            'password' => ''
         ];
         $dbPackage = new DbPackage();
         $dbPackage->addToContainer($c);
@@ -47,6 +49,27 @@ class DbTest extends \Codeception\TestCase\Test
         $dbPackage = new DbPackage();
         $dbPackage->addToContainer($c);
         $pdo = $c->get(PDO::class);
+    }
+
+    public function testTrait()
+    {
+        $c = $this->container;
+        $c['db'] = [
+            'host' => '127.0.0.1',
+            'dbname' => 'travis_test',
+            'user' => 'travis',
+            'password' => ''
+        ];
+        $dbPackage = new DbPackage();
+        $dbPackage->addToContainer($c);
+        $pdo = $c->get(PDO::class);
+
+        $class = new class implements DbProviderInterface {
+            use HasDbTrait;
+        };
+
+        $class->setDb($pdo);
+        $this->assertInstanceOf(PDO::class, $class->getDb());
     }
 
 }
