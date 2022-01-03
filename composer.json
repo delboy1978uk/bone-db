@@ -1,5 +1,5 @@
 {
-    "name": "delboy1978uk\/bone-db",
+    "name": "delboy1978uk/bone-db",
     "description": "Db package for Bone Framework",
     "license": "MIT",
     "authors": [
@@ -13,8 +13,8 @@
         "delboy1978uk/barnacle": "^2.3"
     },
     "require-dev": {
-        "codeception/codeception": "^2.2",
-        "roave\/security-advisories": "dev-master"
+        "codeception/codeception": "^3.1",
+        "roave/security-advisories": "dev-latest"
     },
     "autoload": {
         "psr-4": {
