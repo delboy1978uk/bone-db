@@ -13,7 +13,7 @@
         "delboy1978uk/barnacle": "^2.3"
     },
     "require-dev": {
-        "codeception/codeception": "^3.1",
+        "codeception/codeception": "^4.1",
         "roave/security-advisories": "dev-latest"
     },
     "autoload": {
