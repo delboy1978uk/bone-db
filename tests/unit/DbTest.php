@@ -31,9 +31,9 @@ class DbTest extends \Codeception\TestCase\Test
         $c = $this->container;
         $c['db'] = [
             'host' => '127.0.0.1',
-            'dbname' => 'travis_test',
-            'user' => 'travis',
-            'password' => ''
+            'dbname' => 'awesome',
+            'user' => 'root',
+            'password' => 'root'
         ];
         $dbPackage = new DbPackage();
         $dbPackage->addToContainer($c);
