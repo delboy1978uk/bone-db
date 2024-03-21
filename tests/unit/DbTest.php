@@ -9,7 +9,7 @@ use Bone\Db\DbProviderInterface;
 use Bone\Db\HasDbTrait;
 use PDO;
 
-class DbTest extends \Codeception\TestCase\Test
+class DbTest extends \Codeception\Test\Unit
 {
     /** @var Container */
     protected $container;
